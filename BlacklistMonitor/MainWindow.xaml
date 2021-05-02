@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         xmlns:ui="http://schemas.modernwpf.com/2019"
         ui:WindowHelper.UseModernWindowStyle="True"
-        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing" Loaded="Window_Loaded">
+        Title="MainWindow" Height="500" Width="500" Closing="Window_Closing" Loaded="Window_Loaded" Left="500" Top="500">
     <Grid>
         <Label x:Name="MousePos" Content="" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
