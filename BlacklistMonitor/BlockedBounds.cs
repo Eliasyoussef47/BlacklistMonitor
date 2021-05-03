@@ -12,7 +12,7 @@ namespace BlacklistMonitor
     /// </summary>
     class BlockedBounds
     {
-        #region fields
+        #region Fields
         /// <summary>
         /// Left position of the rectangle.
         /// </summary>
@@ -31,6 +31,7 @@ namespace BlacklistMonitor
         private int bottom;
         #endregion
 
+        #region Constructors
         public BlockedBounds(int left, int top, int right, int bottom)
         {
             this.left = left;
@@ -46,8 +47,9 @@ namespace BlacklistMonitor
             right = (int)rect.Right;
             bottom = (int)rect.Bottom;
         }
+        #endregion
 
-        #region properties
+        #region Properties
         public int Left
         {
             get
@@ -109,6 +111,11 @@ namespace BlacklistMonitor
         }
         #endregion
 
+        public bool Contains(Point point)
+        {
+            return (point.X < Right && point.X > Left && point.Y > Top && point.Y < Bottom);
+        }
+        
         public bool Equals(Rectangle rectangle)
         {
             return rectangle.Left == left && rectangle.Top == top && rectangle.Right == right && rectangle.Bottom == bottom;
